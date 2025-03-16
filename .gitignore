@@ -13,6 +13,7 @@ node_modules/
 vendor/
 
 # Environment and sensitive configuration files
+venv/
 .env
 .env.local
 .env.development.local
