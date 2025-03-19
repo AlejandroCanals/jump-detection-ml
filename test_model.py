@@ -19,7 +19,7 @@ class JumpDetectionModel(nn.Module):
 
 # Cargar el modelo
 model = JumpDetectionModel()
-model.load_state_dict(torch.load("../models/jump_detection_model.pth"))
+model.load_state_dict(torch.load("models/jump_detection_model.pth"))
 model.eval()
 
 # Simular una entrada de audio procesada (MFCC)
