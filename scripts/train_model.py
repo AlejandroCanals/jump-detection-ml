@@ -59,5 +59,5 @@ with torch.no_grad():
     print(f"Model accuracy: {accuracy.item() * 100:.2f}%")
 
 # Save the model
-torch.save(model.state_dict(), "models/jump_detection_model.pth")
+torch.save(model.state_dict(), "../models/jump_detection_model.pth")
 print("Model saved to models/jump_detection_model.pth")

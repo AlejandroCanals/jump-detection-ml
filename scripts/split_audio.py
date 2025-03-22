@@ -3,8 +3,8 @@ import soundfile as sf
 import os
 
 # This file splits the audio file into 1-seconds segment for processing later
-AUDIO_FILE = "data/session.m4a"
-OUTPUT_DIR = "segments/" 
+AUDIO_FILE = "../data/comba-1.wav"
+OUTPUT_DIR = "../data/segments/" 
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 

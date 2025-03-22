@@ -6,7 +6,7 @@ import pandas as pd
 #This file converts audio files into numerical data that will then be used by the machine learning model.
 
 #Audio directory
-AUDIO_DIR = "data/"
+AUDIO_DIR = "../data/"
 
 #Extracting features from audio files
 
@@ -26,5 +26,5 @@ for file in os.listdir(AUDIO_DIR):
 
 #Save data to CSV file
 df = pd.DataFrame(data, columns=[f"mfcc_{i}" for i in range(13)] + ["label"])
-df.to_csv("data/jump_data.csv", index=False)
+df.to_csv("../data/jump_data.csv", index=False)
 print("Datos guardados en data/jump_data.csv")

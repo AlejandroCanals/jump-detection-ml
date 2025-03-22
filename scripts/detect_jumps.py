@@ -2,8 +2,8 @@ import librosa
 import numpy as np
 import os
 
-SEGMENTS_DIR = "filtered_segments/"
-JUMP_SEGMENTS_DIR = "jump_segments/"
+SEGMENTS_DIR = "../data/filtered_segments/"
+JUMP_SEGMENTS_DIR = "../data/jump_segments/"
 
 os.makedirs(JUMP_SEGMENTS_DIR, exist_ok=True)
 

@@ -2,8 +2,8 @@ import librosa
 import soundfile as sf
 import os
 
-SEGMENTS_DIR = "segments/"
-FILTERED_DIR = "filtered_segments/"
+SEGMENTS_DIR = "../data/segments/"
+FILTERED_DIR = "../data/filtered_segments/"
 
 os.makedirs(FILTERED_DIR, exist_ok=True)
 

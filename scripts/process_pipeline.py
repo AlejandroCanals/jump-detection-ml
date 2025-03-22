@@ -1,4 +1,6 @@
 import subprocess
+import sys
+
 
 # Lista de scripts a ejecutar en orden
 scripts = [
@@ -14,7 +16,7 @@ print("🚀 Starting the full pipeline process...\n")
 
 for script in scripts:
     print(f"▶ Running {script}...")
-    result = subprocess.run(["python", f"scripts/{script}"], capture_output=True, text=True)
+    result = subprocess.run([sys.executable, script], capture_output=True, text=True)
     
     if result.returncode == 0:
         print(f"✅ {script} completed successfully!\n")

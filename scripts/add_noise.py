@@ -3,9 +3,9 @@ import numpy as np
 import soundfile as sf
 import os
 
-AUDIO_DIR = "jump_segments/"
-NOISE_DIR = "noise_samples/"
-AUGMENTED_DIR = "augmented_data/"
+AUDIO_DIR = "../data/jump_segments/"
+NOISE_DIR = "../data/noise_samples/"
+AUGMENTED_DIR = "../data/augmented_data/"
 
 os.makedirs(AUGMENTED_DIR, exist_ok=True)
 
