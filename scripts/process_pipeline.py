@@ -1,15 +1,14 @@
 import subprocess
 import sys
 
-
-# Lista de scripts a ejecutar en orden
+# List of scripts to run in order
 scripts = [
-    "split_audio.py",     # 1️⃣ Divide la sesión en fragmentos pequeños
-    "filter_audio.py",    # 2️⃣ Filtra música y ruidos irrelevantes
-    "detect_jumps.py",    # 3️⃣ Detecta qué fragmentos contienen saltos
-    "add_noise.py",       # 4️⃣ Aumenta el dataset con ruido artificial
-    "preprocess_data.py", # 5️⃣ Extrae los MFCCs para el entrenamiento
-    "train_model.py"      # 6️⃣ Entrena el modelo con los datos procesados
+    "split_audio.py",     # 1️⃣ Splits the session into small segments
+    "filter_audio.py",    # 2️⃣ Filters out music and irrelevant noise
+    "add_noise.py",       # 3️⃣ Augments the dataset with artificial noise
+    "detect_jumps.py",    # 4️⃣ Detects which segments contain jumps
+    "preprocess_data.py", # 5️⃣ Extracts MFCCs for model training
+    "train_model.py"      # 6️⃣ Trains the model with the processed data
 ]
 
 print("🚀 Starting the full pipeline process...\n")
@@ -23,6 +22,6 @@ for script in scripts:
     else:
         print(f"❌ ERROR in {script}!\n")
         print(result.stderr)
-        break  # Detener la ejecución si hay un error
+        break 
 
 print("🎯 All steps completed successfully! Model is ready! 🚀")
