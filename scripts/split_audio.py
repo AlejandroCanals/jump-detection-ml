@@ -4,19 +4,19 @@ import soundfile as sf
 
 RAW_BASE = "../data/raw"
 OUTPUT_JUMP = "../data/classified/jump_segments/"
-OUTPUT_NOISE = "../data/classified/non_jump_segments/"
+OUTPUT_NO_JUMP = "../data/classified/non_jump_segments/"
 
 os.makedirs(OUTPUT_JUMP, exist_ok=True)
-os.makedirs(OUTPUT_NOISE, exist_ok=True)
+os.makedirs(OUTPUT_NO_JUMP, exist_ok=True)
 
-for label in ["jumps", "noise"]:
+for label in ["jumps", "no_jumps"]:
     folder = os.path.join(RAW_BASE, label)
     for filename in os.listdir(folder):
         if not filename.endswith(".wav"):
             continue
 
         filepath = os.path.join(folder, filename)
-        print(f"✂️ Cortando: {filepath}")
+        print(f" Cortando: {filepath}")
 
         y, sr = librosa.load(filepath, sr=16000)
         segment_length = sr  # 1 segundo
@@ -27,7 +27,7 @@ for label in ["jumps", "noise"]:
             end = start + segment_length
             segment = y[start:end]
 
-            output_folder = OUTPUT_JUMP if label == "jumps" else OUTPUT_NOISE
+            output_folder = OUTPUT_JUMP if label == "jumps" else OUTPUT_NO_JUMP
             output_name = f"{filename.replace('.wav', '')}_seg_{i+1}.wav"
             output_path = os.path.join(output_folder, output_name)
 

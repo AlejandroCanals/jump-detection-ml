@@ -4,8 +4,8 @@ import numpy as np
 import pandas as pd
 
 # Carpetas de entrada
-JUMP_DIR = "../data/jump_segments/"
-NON_JUMP_DIR = "../data/non_jump_segments/"
+JUMP_DIR = "../data/classified/jump_segments/"
+NON_JUMP_DIR = "../data/classified/non_jump_segments/"
 
 # Archivo de salida
 OUTPUT_CSV = "../data/jump_data.csv"
