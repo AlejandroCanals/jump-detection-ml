@@ -1,3 +1,12 @@
+# Jump Detection ML 🎧🤸‍♂️
+
+This project was created to **test the feasibility of a mobile app idea**:  
+an application capable of **counting jump rope repetitions using only the device’s microphone**, without the need for wearables or additional sensors.  
+
+The repository contains the data, scripts, and models used to experiment with audio processing and machine learning for **jump detection through sound analysis**.
+
+---
+
 ## 📁 Project Structure
 
 ```
